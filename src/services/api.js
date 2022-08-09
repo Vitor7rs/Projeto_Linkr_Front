@@ -1,0 +1,1 @@
+// comunicações com o banco de dados / requisições

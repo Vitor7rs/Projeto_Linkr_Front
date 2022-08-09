@@ -1,0 +1,1 @@
+// componentes globais e afins
