@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //context
 
 //pages
+import SignUp from "./pages/signUp";
 
 export default function App() {
 
@@ -11,7 +12,7 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<></>} />
-                    <Route path="/sign-up" element={<></>} />
+                    <Route path="/sign-up" element={<SignUp/>} />
                 </Routes>
             </BrowserRouter>
         </>
