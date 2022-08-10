@@ -79,6 +79,11 @@ export const Buttons = styled.button`
 	font-weight: 700;
 	font-size: 14px;
 	color: #FFFFFF;
+	&:disabled{
+		border: 1px solid #999999;
+		background-color: #cccccc;
+		color: #666666;
+	}
 `;
 
 export const Picture = styled.img`
