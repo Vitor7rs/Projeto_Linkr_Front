@@ -7,3 +7,8 @@ export function signUp(userObject) {
     const promisse = axios.post(`${URL}/sign-up`, userObject)
     return promisse;
 }
+
+export function signIn(userObject) {
+    const promisse = axios.post(`${URL}/`, userObject)
+    return promisse;
+}
