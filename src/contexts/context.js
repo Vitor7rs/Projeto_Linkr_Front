@@ -1,1 +1,0 @@
-// nessa pasta, contexte api com token e afins
