@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import Logo from "../../components/Logo";
+import Logo from "../../components/logo";
 import BannerDesc from "../../components/BannerDesc"
 import { useNavigate } from "react-router-dom";
 import { Container, BannerContainer, AuthContainer, FormContainer, InputBox, ButtonBox, InfoLink } from "./style";
 import UserContext from "../../contexts/userContext";
-import { login } from "../../services/authService";
+import { login } from "../../services/api";
 
 export default function SignIn() {
     const [email, setEmail] = useState("");
@@ -15,15 +15,16 @@ export default function SignIn() {
     const navigate = useNavigate();
 
     async function processSign(){
-        if(button === false){
-            return;
-        }
-        setButton(false);
         if(email.length === 0 || password.length === 0) {
             alert("Please, complete all fields!")
             setButton(true)
             return;
         }
+        
+        if(button === false){
+            return;
+        }
+        setButton(false);
         const loginObject = {
             email: email,
             password: password
