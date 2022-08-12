@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserContext from "./contexts/userContext";
 //pages
 import SignUp from "./pages/signUp";
+import { useState } from "react";
 
 export default function App() {
 
