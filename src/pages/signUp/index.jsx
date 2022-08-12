@@ -15,22 +15,24 @@ export default function SignUp() {
    const navigate = useNavigate();
 
    async function processSignUp() {
-      if (button === false) {
-         return;
-      }
-
-      setButton(false);
-      
-      if (email.length === 0 || password.length === 0 || confirmPassword.length === 0 ||
+      if(email.length === 0 || password.length === 0 || confirmPassword.length === 0 ||
          username.length === 0 || pictureUrl.length === 0) {
          alert("Please, complete all fields!")
          return;
       }
-      if (password !== confirmPassword) {
+
+      if(password !== confirmPassword){
          alert("passwords must be the same!")
          return;
       }
-      const userObject = {
+
+      if(button === false){
+         return;
+      }
+
+      setButton(false);
+
+      const userObject ={
          email: email,
          password: password,
          confirmPassword: confirmPassword,
